@@ -51,12 +51,10 @@ def configure_flows(net, hops):
 
         # Configure h1 to h2 direction
         cmd = f"ovs-ofctl add-flow {switch_name} in_port=1,actions=output:2"
-        print(cmd)
         run_command(cmd)
 
         # Configure h2 to h1 direction
         cmd = f"ovs-ofctl add-flow {switch_name} in_port=2,actions=output:1"
-        print(cmd)
         run_command(cmd)
 
         print(f"Configured flows for {switch_name}")
