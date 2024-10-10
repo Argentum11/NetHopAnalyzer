@@ -60,6 +60,32 @@ We assume `h1` is the client and `h2` is the server
     iperf3 -c <server_ip> -u -b 10G -t 30 > udp-1-hop-raw.txt
     ```
 
+#### 2-3 extract time & bandwidth to another file
+
+Before executing this step, you should have the following files:
+
+- tcp-1-hop-raw.txt
+- tcp-3-hop-raw.txt
+- tcp-5-hop-raw.txt
+- udp-1-hop-raw.txt
+- udp-3-hop-raw.txt
+- udp-5-hop-raw.txt
+
+then use the python script to extract time and bandwidth
+
+```bash
+python3 extract_bandwidth.py
+```
+
+it should create the corresponding data files listed below:
+
+- tcp-1-hop-data.txt
+- tcp-3-hop-data.txt
+- tcp-5-hop-data.txt
+- udp-1-hop-data.txt
+- udp-3-hop-data.txt
+- udp-5-hop-data.txt
+
 ### error handling
 
 #### script stucks while creating network topology
