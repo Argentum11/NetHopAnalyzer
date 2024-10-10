@@ -1,5 +1,15 @@
 # NetHopAnalyzer
 
+## Results
+
+### TCP
+
+<img src="img/tcp_graph.png" alt="TCP bandwidth Graph" width="60%"/>
+
+### UDP
+
+<img src="img/udp_graph.png" alt="UDP bandwidth Graph" width="60%"/>
+
 ## How to use
 
 ### create a network topology with hops between 2 nodes
