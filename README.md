@@ -86,6 +86,15 @@ it should create the corresponding data files listed below:
 - udp-3-hop-data.txt
 - udp-5-hop-data.txt
 
+#### 3. draw graph
+
+use the prepared gnuplot script and the following command to create graphs
+
+```bash
+gnuplot gnuplot/generate_tcp_graph > img/tcp_graph.png
+gnuplot gnuplot/generate_udp_graph > img/udp_graph.png
+```
+
 ### error handling
 
 #### script stucks while creating network topology

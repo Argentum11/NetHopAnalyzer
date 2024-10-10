@@ -1,0 +1,23 @@
+# Set output format to PNG
+set terminal png size 1024,768
+
+# Set graph style
+set style data linespoints
+set grid
+
+# Set titles and labels
+set title "TCP Bandwidth Comparison Across Different Hop Counts"
+set xlabel "Time (seconds)"
+set ylabel "Bandwidth (Gbits/sec)"
+
+# Set legend
+set key outside right top
+set key box
+
+# Set y-range to start from 0
+set yrange [0:]
+
+# Plot the extracted data
+plot "tcp-1-hop-data.txt" using 1:2 title "1 Hop" linewidth 2 pointtype 7, \
+     "tcp-3-hop-data.txt" using 1:2 title "3 Hops" linewidth 2 pointtype 9, \
+     "tcp-5-hop-data.txt" using 1:2 title "5 Hops" linewidth 2 pointtype 11
